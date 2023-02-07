@@ -4,15 +4,6 @@ const PRODUCTS_BACKEND = "origin_0";
 const router = new Router();
 let backendResponse;
 
-// Configure middleware that automatically proxies request
-// asynchronously to your backend and sets the global variable
-// for use in all your base request handlers.
-router.use(async (req, res) => {
-  backendResponse = await fetch(req, {
-    backend: PRODUCTS_BACKEND
-  });
-});
-
 // If the URL begins with /products/
 router.all("(.*)", async (req, res) => {
   // Parse the JSON response from the backend.
