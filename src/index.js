@@ -1,5 +1,5 @@
 import { Router } from "@fastly/expressly";
-
+ 
 const PRODUCTS_BACKEND = "origin_0";
 const router = new Router();
 let backendResponse;
