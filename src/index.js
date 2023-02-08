@@ -1,5 +1,5 @@
 /// <reference types="@fastly/js-compute" />
-
+ 
 const handler = async (event) => {
   // Get the request from the client.
   const req = event.request
