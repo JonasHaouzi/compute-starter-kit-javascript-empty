@@ -1,6 +1,16 @@
-addEventListener("fetch", (event) => event.respondWith(handleRequest(event)));
+/// <reference types="@fastly/js-compute" />
 
-async function handleRequest(event) {
-  return new Response("OK", { status: 200 });
-}
+const handler = async (event) => {
+  // Get the request from the client.
+  const req = event.request
+  
+const beresp = await fetch(req, {
+    backend: "origin_0"
+  })
 
+
+  // Send our response back to the client.
+  return beresp;
+};
+
+addEventListener("fetch", event => event.respondWith(handler(event)));
