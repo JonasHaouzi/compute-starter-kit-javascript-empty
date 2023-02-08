@@ -3,7 +3,7 @@
 const handler = async (event) => {
   // Get the request from the client.
   const req = event.request
-  
+console.log(req);  
 const beresp = await fetch(req, {
     backend: "origin_0"
   })
