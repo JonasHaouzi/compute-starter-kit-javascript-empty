@@ -4,9 +4,9 @@ const handler = async (event) => {
   // Get the request from the client.
   const req = event.request
   
-const beresp = await fetch(req, {
+const beresp = await fetch(req*/, {
     backend: "origin_0"
-  })
+  }*/)
 
 
   // Send our response back to the client.
