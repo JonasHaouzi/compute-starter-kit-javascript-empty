@@ -8,7 +8,7 @@ addEventListener("fetch", async (event) => {
     backend: "origin_0"
   });
 
-  if (backendResponse.status == 200) {
+/*  if (backendResponse.status == 200) {
     // Parse the URL so we can determine the path.
     let url = new URL(req.url);
 console.log("JOJO");
@@ -27,7 +27,7 @@ console.log("JOJO");
       });
     }
   }
-
+*/
   // Send the backend response to the client.
   event.respondWith(backendResponse);
 });
